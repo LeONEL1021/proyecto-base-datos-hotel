@@ -1,0 +1,1529 @@
+{
+  "diagramType": 2,
+  "data": {
+    "nodes": [
+      {
+        "id": "t-1",
+        "type": "Table",
+        "position": {
+          "x": -198.23841170086104,
+          "y": -206.63189251495774
+        },
+        "data": {
+          "label": "HOTEL",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c-t-1-1",
+              "name": "id_hotel",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-1-2",
+              "name": "nombre",
+              "type": "VARCHAR(100)",
+              "position": 1,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-1-3",
+              "name": "direccion",
+              "type": "TEXT",
+              "position": 2,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-1-4",
+              "name": "telefono",
+              "type": "VARCHAR(20)",
+              "position": 3,
+              "isPrimaryKey": false,
+              "isOptional": true,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-1-5",
+              "name": "categoria",
+              "type": "VARCHAR(50)",
+              "position": 4,
+              "isPrimaryKey": false,
+              "isOptional": true,
+              "isUnique": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 150
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "t-2",
+        "type": "Table",
+        "position": {
+          "x": 187.88823855275248,
+          "y": 11.114324774991147
+        },
+        "data": {
+          "label": "TIPO_HABITACION",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c-t-2-1",
+              "name": "id_tipo",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-2-2",
+              "name": "nombre",
+              "type": "VARCHAR(60)",
+              "position": 1,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-2-3",
+              "name": "descripcion",
+              "type": "TEXT",
+              "position": 2,
+              "isPrimaryKey": false,
+              "isOptional": true,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-2-4",
+              "name": "capacidad",
+              "type": "INT",
+              "position": 3,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-2-5",
+              "name": "tarifa_noche",
+              "type": "NUMERIC(10,2)",
+              "position": 4,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 150
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "t-3",
+        "type": "Table",
+        "position": {
+          "x": 185.11853042534727,
+          "y": -218.38872817305898
+        },
+        "data": {
+          "label": "HABITACION",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c-t-3-2",
+              "name": "numero_habitacion",
+              "type": "VARCHAR(10)",
+              "position": 1,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-3-3",
+              "name": "piso",
+              "type": "INT",
+              "position": 2,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-3-4",
+              "name": "estado",
+              "type": "VARCHAR(20)",
+              "position": 3,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "fk_a7b355c0-1cb7-41bc-9d21-56762ddaf5cc",
+              "name": "fk_HOTEL",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "3be3a294-0c86-407c-b981-c48efc9dbacb",
+                "sourceTableId": "t-1",
+                "columns": [
+                  {
+                    "id": "fk_c-t-1-1",
+                    "name": "id_hotel",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "fk_4e3d98f2-8ae6-433c-9a2c-d5044eb757e9",
+              "name": "fk_TIPO_HABITACION",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "9028bea5-928d-4643-801a-996ac0568e6b",
+                "sourceTableId": "t-2",
+                "columns": [
+                  {
+                    "id": "fk_c-t-2-1",
+                    "name": "id_tipo",
+                    "type": "INT"
+                  }
+                ]
+              }
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 152
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "t-4",
+        "type": "Table",
+        "position": {
+          "x": 212.16933408479707,
+          "y": 253.9699879863843
+        },
+        "data": {
+          "label": "HUESPED",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c-t-4-1",
+              "name": "id_huesped",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-4-2",
+              "name": "nombre",
+              "type": "VARCHAR(80)",
+              "position": 1,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-4-3",
+              "name": "apellido",
+              "type": "VARCHAR(80)",
+              "position": 2,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-4-4",
+              "name": "email",
+              "type": "VARCHAR(120)",
+              "position": 3,
+              "isPrimaryKey": false,
+              "isOptional": true,
+              "isUnique": true
+            },
+            {
+              "id": "c-t-4-5",
+              "name": "telefono",
+              "type": "VARCHAR(20)",
+              "position": 4,
+              "isPrimaryKey": false,
+              "isOptional": true,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-4-6",
+              "name": "documento",
+              "type": "VARCHAR(30)",
+              "position": 5,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": true
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 175
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "t-5",
+        "type": "Table",
+        "position": {
+          "x": -846.5214031272357,
+          "y": -387.6001466269315
+        },
+        "data": {
+          "label": "EMPLEADO",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c-t-5-1",
+              "name": "id_empleado",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-5-3",
+              "name": "nombre",
+              "type": "VARCHAR(80)",
+              "position": 2,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-5-4",
+              "name": "apellido",
+              "type": "VARCHAR(80)",
+              "position": 3,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-5-5",
+              "name": "cargo",
+              "type": "VARCHAR(60)",
+              "position": 4,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-5-6",
+              "name": "telefono",
+              "type": "VARCHAR(20)",
+              "position": 5,
+              "isPrimaryKey": false,
+              "isOptional": true,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-5-7",
+              "name": "email",
+              "type": "VARCHAR(n)",
+              "position": 6,
+              "isPrimaryKey": false,
+              "isOptional": true,
+              "isUnique": true
+            },
+            {
+              "id": "fk_03d281d0-5b0e-4345-8381-7556c5fa5a52",
+              "name": "fk_HOTEL",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "325f6430-4634-4936-a287-6defda8d1fda",
+                "sourceTableId": "t-1",
+                "columns": [
+                  {
+                    "id": "fk_c-t-1-1",
+                    "name": "id_hotel",
+                    "type": "INT"
+                  }
+                ]
+              }
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 201
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "t-6",
+        "type": "Table",
+        "position": {
+          "x": -216.1063791592507,
+          "y": 176.5555552167882
+        },
+        "data": {
+          "label": "RESERVACION",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c-t-6-1",
+              "name": "id_reservacion",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-6-5",
+              "name": "fecha_reservacion",
+              "type": "TIMESTAMP",
+              "position": 4,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-6-6",
+              "name": "fecha_checkin",
+              "type": "DATE",
+              "position": 5,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-6-7",
+              "name": "fecha_checkout",
+              "type": "DATE",
+              "position": 6,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-6-8",
+              "name": "num_huespedes",
+              "type": "INT",
+              "position": 7,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-6-9",
+              "name": "estado",
+              "type": "VARCHAR(20)",
+              "position": 8,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "fk_4f5ed7ea-3957-4d05-9c5d-c090d37159be",
+              "name": "fk_HUESPED",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "675f2766-51a0-41ba-91d4-58ae44799a18",
+                "sourceTableId": "t-4",
+                "columns": [
+                  {
+                    "id": "fk_c-t-4-1",
+                    "name": "id_huesped",
+                    "type": "INT"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "fk_66ae78e9-714a-4500-a288-f1603db6468a",
+              "name": "fk_HOTEL",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "771b8688-7991-41b5-b4b7-576d64eb676a",
+                "sourceTableId": "t-1",
+                "columns": [
+                  {
+                    "id": "fk_c-t-1-1",
+                    "name": "id_hotel",
+                    "type": "INT"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "fk_d60184e1-41ec-4e1e-8928-3147e9f18da4",
+              "name": "fk_TIPO_HABITACION",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "b1f0bf09-15af-49cf-b465-912fb40b8103",
+                "sourceTableId": "t-2",
+                "columns": [
+                  {
+                    "id": "fk_c-t-2-1",
+                    "name": "id_tipo",
+                    "type": "INT"
+                  }
+                ]
+              }
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 251
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "t-7",
+        "type": "Table",
+        "position": {
+          "x": -858.1744540324086,
+          "y": 102.58023877840517
+        },
+        "data": {
+          "label": "CHECK_IN_OUT",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c-t-7-2",
+              "name": "fecha_checkin_real",
+              "type": "TIMESTAMP",
+              "position": 1,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-7-3",
+              "name": "fecha_checkout_real",
+              "type": "TIMESTAMP",
+              "position": 2,
+              "isPrimaryKey": false,
+              "isOptional": true,
+              "isUnique": false
+            },
+            {
+              "id": "fk_6405b5dc-2bdb-43b9-80c9-d2edf6df190b",
+              "name": "fk_EMPLEADO",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "1f3d3210-51a9-48f5-9d60-3453fedad59d",
+                "sourceTableId": "t-5",
+                "columns": [
+                  {
+                    "id": "fk_c-t-5-1",
+                    "name": "id_empleado_checkin",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false,
+              "isPrimaryKey": false
+            },
+            {
+              "id": "fk_ca8bc4f0-8d7b-45fc-aafc-3c297e1996c8",
+              "name": "fk_EMPLEADO",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "c0f1fa43-9371-422d-8bc6-9547e51fc60f",
+                "sourceTableId": "t-5",
+                "columns": [
+                  {
+                    "id": "fk_c-t-5-1",
+                    "name": "id_empleado_checkout",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": true,
+              "isPrimaryKey": false
+            },
+            {
+              "id": "fk_df5357f5-5322-4d2b-bd97-16122fe95543",
+              "name": "fk_RESERVACION",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "76bba27e-28a9-46bc-a98b-8125792455aa",
+                "sourceTableId": "t-6",
+                "columns": [
+                  {
+                    "id": "fk_c-t-6-1",
+                    "name": "id_reservacion",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "fk_3c1ccc03-2c89-4299-844e-44a30b137ba7",
+              "name": "fk_HABITACION",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "2d0920bd-8b91-49e5-b24c-c1ce073ac1b4",
+                "sourceTableId": "t-3",
+                "columns": [
+                  {
+                    "id": "fk_c-t-3-2",
+                    "name": "numero_habitacion",
+                    "type": "VARCHAR(10)"
+                  },
+                  {
+                    "id": "fk_fk_c-t-1-1",
+                    "name": "id_hotel",
+                    "type": "INT"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "14bd6014-e9af-4312-b153-377e082f9a50",
+              "name": "monto_estadia",
+              "type": "INT",
+              "position": 0
+            },
+            {
+              "id": "07f14338-cf21-4a94-92bb-83ba5c2e702e",
+              "name": "consumo-total",
+              "type": "INT",
+              "position": 0
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 243
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "t-8",
+        "type": "Table",
+        "position": {
+          "x": -508.10233391517505,
+          "y": -395.4880417053388
+        },
+        "data": {
+          "label": "SERVICIO",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c-t-8-1",
+              "name": "id_servicio",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-8-3",
+              "name": "nombre",
+              "type": "VARCHAR(80)",
+              "position": 2,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-8-4",
+              "name": "descripcion",
+              "type": "TEXT",
+              "position": 3,
+              "isPrimaryKey": false,
+              "isOptional": true,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-8-5",
+              "name": "categoria",
+              "type": "VARCHAR(50)",
+              "position": 4,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-8-6",
+              "name": "precio",
+              "type": "NUMERIC(10,2)",
+              "position": 5,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "fk_7c410c56-65ea-4e8a-a344-75186ea84190",
+              "name": "fk_HOTEL",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "e001e526-643d-4300-a2f5-cdae52105b0e",
+                "sourceTableId": "t-1",
+                "columns": [
+                  {
+                    "id": "fk_c-t-1-1",
+                    "name": "id_hotel",
+                    "type": "INT"
+                  }
+                ]
+              }
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 176
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "t-9",
+        "type": "Table",
+        "position": {
+          "x": -538.172223279907,
+          "y": -137.8357954303916
+        },
+        "data": {
+          "label": "CONSUMO_SERVICIO",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c-t-9-2",
+              "name": "num_consumo",
+              "type": "INT",
+              "position": 1,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-9-4",
+              "name": "fecha",
+              "type": "TIMESTAMP",
+              "position": 3,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-9-5",
+              "name": "cantidad",
+              "type": "INT",
+              "position": 4,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-9-6",
+              "name": "precio_unitario",
+              "type": "NUMERIC(10,2)",
+              "position": 5,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-9-7",
+              "name": "subtotal",
+              "type": "NUMERIC(10,2)",
+              "position": 6,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "fk_acde8de1-37aa-42ff-8c54-09bccd536893",
+              "name": "fk_SERVICIO",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "415390bb-142a-4885-b535-dce1730ed902",
+                "sourceTableId": "t-8",
+                "columns": [
+                  {
+                    "id": "fk_c-t-8-1",
+                    "name": "id_servicio",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isPrimaryKey": false
+            },
+            {
+              "id": "fk_e69f335a-f8a1-4a3f-a882-12daa1d35994",
+              "name": "fk_CHECK_IN_OUT",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "87b062e6-4029-490a-9267-23641955e70b",
+                "sourceTableId": "t-7",
+                "columns": [
+                  {
+                    "id": "fk_fk_c-t-6-1",
+                    "name": "id_reservacion",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 202
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "t-10",
+        "type": "Table",
+        "position": {
+          "x": -595.3940139956188,
+          "y": 454.2953383410064
+        },
+        "data": {
+          "label": "FACTURA",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c-t-10-1",
+              "name": "id_factura",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-10-3",
+              "name": "fecha",
+              "type": "TIMESTAMP",
+              "position": 2,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-10-4",
+              "name": "subtotal_habitacion",
+              "type": "NUMERIC(10,2)",
+              "position": 3,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-10-5",
+              "name": "subtotal_servicios",
+              "type": "NUMERIC(10,2)",
+              "position": 4,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-10-6",
+              "name": "impuestos",
+              "type": "NUMERIC(10,2)",
+              "position": 5,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-10-7",
+              "name": "total",
+              "type": "NUMERIC(10,2)",
+              "position": 6,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-10-8",
+              "name": "metodo_pago",
+              "type": "VARCHAR(30)",
+              "position": 7,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c-t-10-9",
+              "name": "estado_pago",
+              "type": "VARCHAR(20)",
+              "position": 8,
+              "isPrimaryKey": false,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "fk_aa15a039-6e81-43a8-a48d-69cfee4e3968",
+              "name": "fk_RESERVACION",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "067bfa57-c24b-4224-9124-7c16bada4c7b",
+                "sourceTableId": "t-6",
+                "columns": [
+                  {
+                    "id": "fk_c-t-6-1",
+                    "name": "id_reservacion",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isUnique": true
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 251
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "d818fc9c-08d1-4296-95ae-b68c6f4b8e14",
+        "type": "Table",
+        "position": {
+          "x": -240.31456209251473,
+          "y": 552.2323415333335
+        },
+        "data": {
+          "label": "Detalle_factura",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "57a10467-59dd-4ecd-bb7a-1a3f98b753de",
+              "name": "descripcion",
+              "type": "INT",
+              "position": 0,
+              "isOptional": false,
+              "isPrimaryKey": false
+            },
+            {
+              "id": "d1d9de5a-62e5-420e-ab6c-611ef186e671",
+              "name": "cantidaad",
+              "type": "INT",
+              "position": 0,
+              "isOptional": false,
+              "isPrimaryKey": false
+            },
+            {
+              "id": "6bfbe616-ca01-4c97-9858-9c8827d184e8",
+              "name": "precio_unitario",
+              "type": "INT",
+              "position": 0,
+              "isOptional": false,
+              "isPrimaryKey": false
+            },
+            {
+              "id": "f18f5a81-8c61-45f2-ae07-c96855e735aa",
+              "name": "descuento",
+              "type": "INT",
+              "position": 0,
+              "isOptional": true,
+              "isPrimaryKey": false
+            },
+            {
+              "id": "dbd9a4f9-e0c9-4b09-8970-65997b8ed7a9",
+              "name": "subtotaal",
+              "type": "INT",
+              "position": 0,
+              "isOptional": false,
+              "isPrimaryKey": false
+            },
+            {
+              "id": "fk_34572ba5-ed2f-44c9-bba4-146e635c216b",
+              "name": "fk_FACTURA",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "9461720a-4b11-48f5-a12f-46d9cfb6c6f4",
+                "sourceTableId": "t-10",
+                "columns": [
+                  {
+                    "id": "fk_c-t-10-1",
+                    "name": "id_factura",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "6740c681-ae4e-4a03-aa93-614f47ace437",
+              "name": "num_detalle",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            }
+          ],
+          "isSelected": false,
+          "isFactTable": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 201
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "t-5->t-1_g-3-t-5-t-1-c-t-5-2",
+        "type": "Relational",
+        "source": "t-5",
+        "target": "t-1",
+        "targetHandle": "foreign-key-handle-g-3-t-5-t-1-c-t-5-2",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "g-3-t-5-t-1-c-t-5-2",
+            "sourceTableId": "t-5",
+            "columns": [
+              {
+                "id": "c-t-5-2",
+                "name": "id_hotel",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-8->t-1_g-4-t-8-t-1-c-t-8-2",
+        "type": "Relational",
+        "source": "t-8",
+        "target": "t-1",
+        "targetHandle": "foreign-key-handle-g-4-t-8-t-1-c-t-8-2",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "g-4-t-8-t-1-c-t-8-2",
+            "sourceTableId": "t-8",
+            "columns": [
+              {
+                "id": "c-t-8-2",
+                "name": "id_hotel",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-6->t-4_g-5-t-6-t-4-c-t-6-2",
+        "type": "Relational",
+        "source": "t-6",
+        "target": "t-4",
+        "targetHandle": "foreign-key-handle-g-5-t-6-t-4-c-t-6-2",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "g-5-t-6-t-4-c-t-6-2",
+            "sourceTableId": "t-6",
+            "columns": [
+              {
+                "id": "c-t-6-2",
+                "name": "id_huesped",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-6->t-3_g-6-t-6-t-3-c-t-6-3-c-t-6-4",
+        "type": "Relational",
+        "source": "t-6",
+        "target": "t-3",
+        "targetHandle": "foreign-key-handle-g-6-t-6-t-3-c-t-6-3-c-t-6-4",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "g-6-t-6-t-3-c-t-6-3-c-t-6-4",
+            "sourceTableId": "t-6",
+            "columns": [
+              {
+                "id": "c-t-6-3",
+                "name": "id_hotel",
+                "type": "INT"
+              },
+              {
+                "id": "c-t-6-4",
+                "name": "numero_habitacion",
+                "type": "VARCHAR(10)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-10->t-7_g-12-t-10-t-7-c-t-10-2",
+        "type": "Relational",
+        "source": "t-10",
+        "target": "t-7",
+        "targetHandle": "foreign-key-handle-g-12-t-10-t-7-c-t-10-2",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "g-12-t-10-t-7-c-t-10-2",
+            "sourceTableId": "t-10",
+            "columns": [
+              {
+                "id": "c-t-10-2",
+                "name": "id_reservacion",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-1->t-5_325f6430-4634-4936-a287-6defda8d1fda",
+        "type": "Relational",
+        "source": "t-1",
+        "targetHandle": "foreign-key-handle-325f6430-4634-4936-a287-6defda8d1fda",
+        "target": "t-5",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "325f6430-4634-4936-a287-6defda8d1fda",
+            "sourceTableId": "t-1",
+            "columns": [
+              {
+                "id": "fk_c-t-1-1",
+                "name": "id_hotel",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-1->t-8_e001e526-643d-4300-a2f5-cdae52105b0e",
+        "type": "Relational",
+        "source": "t-1",
+        "targetHandle": "foreign-key-handle-e001e526-643d-4300-a2f5-cdae52105b0e",
+        "target": "t-8",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "e001e526-643d-4300-a2f5-cdae52105b0e",
+            "sourceTableId": "t-1",
+            "columns": [
+              {
+                "id": "fk_c-t-1-1",
+                "name": "id_hotel",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-4->t-6_675f2766-51a0-41ba-91d4-58ae44799a18",
+        "type": "Relational",
+        "source": "t-4",
+        "targetHandle": "foreign-key-handle-675f2766-51a0-41ba-91d4-58ae44799a18",
+        "target": "t-6",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "675f2766-51a0-41ba-91d4-58ae44799a18",
+            "sourceTableId": "t-4",
+            "columns": [
+              {
+                "id": "fk_c-t-4-1",
+                "name": "id_huesped",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-1->t-3_3be3a294-0c86-407c-b981-c48efc9dbacb",
+        "type": "Relational",
+        "source": "t-1",
+        "targetHandle": "foreign-key-handle-3be3a294-0c86-407c-b981-c48efc9dbacb",
+        "target": "t-3",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "3be3a294-0c86-407c-b981-c48efc9dbacb",
+            "sourceTableId": "t-1",
+            "columns": [
+              {
+                "id": "fk_c-t-1-1",
+                "name": "id_hotel",
+                "type": "INT"
+              }
+            ]
+          }
+        },
+        "selected": false
+      },
+      {
+        "id": "t-2->t-3_9028bea5-928d-4643-801a-996ac0568e6b",
+        "type": "Relational",
+        "source": "t-2",
+        "targetHandle": "foreign-key-handle-9028bea5-928d-4643-801a-996ac0568e6b",
+        "target": "t-3",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "9028bea5-928d-4643-801a-996ac0568e6b",
+            "sourceTableId": "t-2",
+            "columns": [
+              {
+                "id": "fk_c-t-2-1",
+                "name": "id_tipo",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-5->t-7_1f3d3210-51a9-48f5-9d60-3453fedad59d",
+        "type": "Relational",
+        "source": "t-5",
+        "targetHandle": "foreign-key-handle-1f3d3210-51a9-48f5-9d60-3453fedad59d",
+        "target": "t-7",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "1f3d3210-51a9-48f5-9d60-3453fedad59d",
+            "sourceTableId": "t-5",
+            "columns": [
+              {
+                "id": "fk_c-t-5-1",
+                "name": "id_empleado",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-5->t-7_c0f1fa43-9371-422d-8bc6-9547e51fc60f",
+        "type": "Relational",
+        "source": "t-5",
+        "targetHandle": "foreign-key-handle-c0f1fa43-9371-422d-8bc6-9547e51fc60f",
+        "target": "t-7",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "c0f1fa43-9371-422d-8bc6-9547e51fc60f",
+            "sourceTableId": "t-5",
+            "columns": [
+              {
+                "id": "fk_c-t-5-1",
+                "name": "id_empleado",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-8->t-9_415390bb-142a-4885-b535-dce1730ed902",
+        "type": "Relational",
+        "source": "t-8",
+        "targetHandle": "foreign-key-handle-415390bb-142a-4885-b535-dce1730ed902",
+        "target": "t-9",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "415390bb-142a-4885-b535-dce1730ed902",
+            "sourceTableId": "t-8",
+            "columns": [
+              {
+                "id": "fk_c-t-8-1",
+                "name": "id_servicio",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-6->t-7_76bba27e-28a9-46bc-a98b-8125792455aa",
+        "type": "Relational",
+        "source": "t-6",
+        "targetHandle": "foreign-key-handle-76bba27e-28a9-46bc-a98b-8125792455aa",
+        "target": "t-7",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "76bba27e-28a9-46bc-a98b-8125792455aa",
+            "sourceTableId": "t-6",
+            "columns": [
+              {
+                "id": "fk_c-t-6-1",
+                "name": "id_reservacion",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-6->t-10_067bfa57-c24b-4224-9124-7c16bada4c7b",
+        "type": "Relational",
+        "source": "t-6",
+        "targetHandle": "foreign-key-handle-067bfa57-c24b-4224-9124-7c16bada4c7b",
+        "target": "t-10",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "067bfa57-c24b-4224-9124-7c16bada4c7b",
+            "sourceTableId": "t-6",
+            "columns": [
+              {
+                "id": "fk_c-t-6-1",
+                "name": "id_reservacion",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-3->t-7_2d0920bd-8b91-49e5-b24c-c1ce073ac1b4",
+        "type": "Relational",
+        "source": "t-3",
+        "targetHandle": "foreign-key-handle-2d0920bd-8b91-49e5-b24c-c1ce073ac1b4",
+        "target": "t-7",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "2d0920bd-8b91-49e5-b24c-c1ce073ac1b4",
+            "sourceTableId": "t-3",
+            "columns": [
+              {
+                "id": "fk_c-t-3-2",
+                "name": "numero_habitacion",
+                "type": "VARCHAR(10)"
+              },
+              {
+                "id": "fk_fk_c-t-1-1",
+                "name": "id_hotel",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-10->d818fc9c-08d1-4296-95ae-b68c6f4b8e14_9461720a-4b11-48f5-a12f-46d9cfb6c6f4",
+        "type": "Relational",
+        "source": "t-10",
+        "targetHandle": "foreign-key-handle-9461720a-4b11-48f5-a12f-46d9cfb6c6f4",
+        "target": "d818fc9c-08d1-4296-95ae-b68c6f4b8e14",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "9461720a-4b11-48f5-a12f-46d9cfb6c6f4",
+            "sourceTableId": "t-10",
+            "columns": [
+              {
+                "id": "fk_c-t-10-1",
+                "name": "id_factura",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-1->t-6_771b8688-7991-41b5-b4b7-576d64eb676a",
+        "type": "Relational",
+        "source": "t-1",
+        "targetHandle": "foreign-key-handle-771b8688-7991-41b5-b4b7-576d64eb676a",
+        "target": "t-6",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "771b8688-7991-41b5-b4b7-576d64eb676a",
+            "sourceTableId": "t-1",
+            "columns": [
+              {
+                "id": "fk_c-t-1-1",
+                "name": "id_hotel",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-2->t-6_b1f0bf09-15af-49cf-b465-912fb40b8103",
+        "type": "Relational",
+        "source": "t-2",
+        "targetHandle": "foreign-key-handle-b1f0bf09-15af-49cf-b465-912fb40b8103",
+        "target": "t-6",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "b1f0bf09-15af-49cf-b465-912fb40b8103",
+            "sourceTableId": "t-2",
+            "columns": [
+              {
+                "id": "fk_c-t-2-1",
+                "name": "id_tipo",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "t-7->t-9_87b062e6-4029-490a-9267-23641955e70b",
+        "type": "Relational",
+        "source": "t-7",
+        "targetHandle": "foreign-key-handle-87b062e6-4029-490a-9267-23641955e70b",
+        "target": "t-9",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "87b062e6-4029-490a-9267-23641955e70b",
+            "sourceTableId": "t-7",
+            "columns": [
+              {
+                "id": "fk_fk_c-t-6-1",
+                "name": "id_reservacion",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "viewport": {
+      "x": 998.3050557141278,
+      "y": 366.9444241844067,
+      "zoom": 0.6139939215086602
+    }
+  },
+  "name": "Hotel_Modelo_Relacional_3FN",
+  "folder": {
+    "name": "Diagrams",
+    "folderType": 1,
+    "depth": 0,
+    "id": 306859
+  },
+  "id": 470037,
+  "updatedAtTimestamp": 1781204605
+}
